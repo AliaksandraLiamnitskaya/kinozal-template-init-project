@@ -1,0 +1,15 @@
+.header {
+  background-color: aqua;
+}
+
+.header-logo {
+  text-align: center;
+
+  &__title {
+    display: block;
+  }
+
+  &__discription {
+    display: block;
+  }
+}
