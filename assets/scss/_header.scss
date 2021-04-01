@@ -1,18 +1,37 @@
 .header {
-  background-color: aqua;
+  @extend %margin-bottom-ld;
 }
 
 .header-logo {
   text-align: center;
   padding: 100px 0;
-  background-color: $dark;
-
+  background-color: $color-dark;
+  background-image: url(../img/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
 
   &__title {
     display: block;
-  }
+    color: $color-accent;
+    @extend %text-shadow;
+    font-family: $font-header;
 
-  &__discription {
-    display: block;
+    @include sm-min {
+      font-size: 3.5rem;
+      letter-spacing: 0.33em;
+      margin-right: -0.27em;
+    }
+    @include sm {
+      font-size: 2.5rem;
+      letter-spacing: 0.2em;
+    }
   }
+}
+.header-lodo__description {
+  display: block;
+  color: $color-light;
+  @extend %text-shadow;
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  font-family: $font-main;
 }

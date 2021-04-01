@@ -1,5 +1,6 @@
 html {
     font-size: $font-size;
+    overflow-y: scroll;
 }
 
 body {
@@ -8,12 +9,12 @@ body {
 }
 
 a {
-    color: $primary;
+    color: $color-primary;
 
     &:hover,
     &:focus {
         text-decoration: none;
-        color: $accent;
+        color: $color-accent;
     }
 }
 
