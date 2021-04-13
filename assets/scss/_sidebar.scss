@@ -1,38 +1,91 @@
 .left-sidebar {
-    @extend %margin-bottom-ld;
+  @extend %margin-bottom-ld;
 }
 
 .panel:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .vertical-slider {
-    border-radius: 4px;
-    overflow: hidden;
-    &__image {
-        width: 100%;
-    }
+  border-radius: 4px;
+  overflow: hidden;
+  &__image {
+    width: 100%;
+  }
 }
 
 .user-login {
-position: relative;
+  position: relative;
 
-    &__tabs {
-        position: absolute;
-        top: 0;
-        right: $gap;
-        border: none;
-        margin-right: -5px;
+  &__tabs {
+    position: absolute;
+    top: 0;
+    right: $gap;
+    border: none;
+    margin-right: -5px;
 
-        a {
-            background-color: transparent !important;
-            color: $color-gray;
-            border: none !important;
-            padding: 14px 5px 11px !important;
-        }
-
-        .active a {
-            color: $color-light !important;
-        }
+    a {
+      background-color: transparent !important;
+      color: $color-gray;
+      border: none !important;
+      padding: 14px 5px 11px !important;
     }
+
+    .active a {
+      color: $color-light !important;
+    }
+  }
+}
+
+$image-size: 75px;
+$image-size-with-padding: $image-size + 10px;
+
+.site-news-item {
+  clear: both;
+  position: relative;
+
+  &:not(:last-of-type) {
+    min-height: $image-size-with-padding;
+    margin-bottom: $gap;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% - #{$image-size-with-padding});
+      height: 1px;
+      background-color: $color-gray;
+      right: 0;
+      bottom: -5px;
+    }
+  }
+
+  &:hover {
+    a {
+      color: $color-accent;
+    }
+    .thumbnail {
+      background-color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  &__image {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: $image-size;
+  }
+
+  &__title {
+    a {
+      @include block-shortener(1rem, 1.5, 50px, 2);
+      transition: color 0.25s;
+    }
+  }
+
+  &__date {
+    text-align: right;
+    color: darken($color-gray, 30%);
+    font-size: 0.8rem;
+  }
 }

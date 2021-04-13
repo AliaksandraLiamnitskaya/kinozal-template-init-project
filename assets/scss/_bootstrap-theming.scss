@@ -81,8 +81,13 @@ margin-bottom: $gap*2;
       }
 
 }
+.btn-lg,
 .input-lg,
 .input-group-lg > .form-control {
- 
   font-size: 0.875rem;
+  height: 46px;
+}
+
+.thumbnail {
+  transition: background-color 0.25s;
 }
