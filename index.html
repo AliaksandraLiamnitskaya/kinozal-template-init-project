@@ -67,11 +67,79 @@
 	<div class="container">
 		<div class="row">
 			<main class="main col-lg-9 col-lg-push-3 col-md-8 col-md-push-4">
+
+				<div class="site-search panel panel-info hidden-lg hidden-md">
+					<div class="panel-heading">Поиск</div>
+					<div class="panel-body">
+						<form action="search">
+							
+							<div class="input-group input-group-lg">
+								<input class="form-control" type="search" placeholder="Поиск по сайту">
+								<span class="input-group-btn">
+									<button class="btn btn-default">
+										<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+									</button>
+								</span>
+							  </div>
+
+							
+							
+						</form>
+					</div>
+				</div>
+				<div class="user-login panel panel-info hidden-lg hidden-md">
+					<div class="panel-heading">Пользователь</div>
+					<div class="panel-body">
+
+					
+							
+							<ul class=" user-login__tabs nav nav-tabs" role="tablist">
+							  <li role="presentation" class="active">
+								  <a href="#user-login-sitebar" aria-controls="user-login-sitebar" role="tab" data-toggle="tab">
+									  <span class="glyphicon glyphicon-log-in"></span>
+								  </a>
+								</li>
+							  <li role="presentation">
+								  <a href="#user-registration-sitebar" aria-controls="user-registration-sitebar" role="tab" data-toggle="tab">
+									  <span class="glyphicon glyphicon-user"></span>
+								  </a>
+								</li>
+							  
+							</ul>
+						  
+							
+							<div class="tab-content user-login__containt">
+							  <div role="tabpanel" class="tab-pane fade in active" id="user-login-sitebar">
+								<form action="login">
+									<div class="form-group"><input class="form-control input-lg" type="text" placeholder="Логин"></div>
+									<div class="form-group"><input class="form-control input-lg" type="password" placeholder="Пароль"></div>
+									<button class="btn btn-default btn-block btn-lg">Вход</button>
+								</form>
+								</div>
+
+							  <div role="tabpanel" class="tab-pane fade" id="user-registration-sitebar">
+								<form action="register">
+									<div class="form-group"><input class="form-control input-lg" type="text" placeholder="Логин"></div>
+									<div class="form-group"><input class="form-control input-lg" type="password" placeholder="Пароль"></div>
+									<div class="form-group"><input class="form-control input-lg" type="email" placeholder="Email"></div>
+									<button class="btn btn-default btn-block btn-lg">Регистрация</button>
+								</form>
+								</div>
+							 
+							</div>
+						
+
+						
+						
+						
+					</div>
+				</div>
+
 				<div style="background-color: red; height: 100px;"></div>
 			</main>
 			<aside class="left-sidebar col-lg-3 col-lg-pull-9 col-md-4 col-md-pull-8">
 				
-				<div class="vertical-slider panel panel-info">
+				<div class="vertical-slider panel panel-info hidden-sm hidden-xs">
 					<div id="vertical-carousel" class="carousel slide" data-ride="carousel">
 						
 						<ol class="carousel-indicators">
@@ -108,7 +176,7 @@
 					  </div>
 
 				</div>
-				<div class="site-search panel panel-info">
+				<div class="site-search panel panel-info visible-lg visible-md">
 					<div class="panel-heading">Поиск</div>
 					<div class="panel-body">
 						<form action="search">
@@ -127,7 +195,7 @@
 						</form>
 					</div>
 				</div>
-				<div class="user-login panel panel-info">
+				<div class="user-login panel panel-info visible-lg visible-md">
 					<div class="panel-heading">Пользователь</div>
 					<div class="panel-body">
 

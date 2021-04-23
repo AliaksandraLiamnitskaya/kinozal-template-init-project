@@ -247,6 +247,15 @@ h2 {
   border-bottom: none;
 }
 
+.top-films__badge {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 @media (min-width: 768px) {
   .navbar-inverse .navbar-nav > li a {
     border-radius: 4px;

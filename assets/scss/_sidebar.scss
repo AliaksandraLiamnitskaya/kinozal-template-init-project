@@ -92,19 +92,19 @@ $image-size-with-padding: $image-size + 10px;
 
 .top-films {
   &__body {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
-    &__list {
-        margin-bottom: 0;
-    }
-    
-    &__item {
-        margin-left: -1px;
-        margin-right: -1px;
-        background-color: transparent;
-        color: $color-primary !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    margin-left: -1px;
+    margin-right: -1px;
+    background-color: transparent;
+    color: $color-primary !important;
 
     &:hover,
     &:focus {
@@ -113,20 +113,26 @@ $image-size-with-padding: $image-size + 10px;
       border-color: $color-accent;
 
       .badge {
-          background-color: $color-dark;
+        background-color: $color-dark;
       }
     }
 
     &:first-of-type {
-border-radius: 0;
-border-top: none;
-}
+      border-radius: 0;
+      border-top: none;
+    }
 
-&:last-of-type {
-    border-radius: 0;
-    border-bottom: none;
+    &:last-of-type {
+      border-radius: 0;
+      border-bottom: none;
     }
   }
 
-  
+  &__badge {
+    position: absolute;
+    right: $gap;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
+
