@@ -1,28 +1,82 @@
 html {
-    font-size: $font-size;
-    overflow-y: scroll;
+  overflow-y: scroll;
+
+  font-size: $font-size;
 }
 
 body {
-    font-size: $font-size; 
-    font-family: $font-main;
+  font-family: $font-main;
+  font-size: $font-size;
 }
 
 a {
-    color: $color-primary;
+  color: $color-primary;
 
-    &:hover,
-    &:focus {
-        text-decoration: none;
-        color: $color-accent;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    color: $color-accent;
+  }
 }
 
 h1 {
-    font-family: $font-header;
+  margin: (-$gap / 2) 0 ($gap * 3);
+
+  font-family: $font-header;
+  font-size: 3rem;
+  line-height: 1.1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    margin: 0.85em 0 0 15px;
+    border-bottom: 3px solid lighten($color-accent, 25%);
+  }
 }
 
 h2 {
-    font-family: $font-header;
+  margin: ($gap * 4) 0 ($gap * 3) ($gap * 3);
+
+  font-family: $font-header;
+  font-size: 2.5rem;
+  line-height: 1.1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    margin: 0.25em 0 0 0;
+    border-bottom: 3px solid lighten($color-accent, 25%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    margin: 0.85em 0 0 15px;
+    border-bottom: 3px solid lighten($color-accent, 25%);
+  }
 }
 
+h3 {
+  font-family: $font-main;
+  // margin-top: 20px;
+  // margin-bottom: 10px;
+  line-height: 1.1;
+  font-size: 1rem;
+}
+
+h4 {
+  color: $color-light;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
