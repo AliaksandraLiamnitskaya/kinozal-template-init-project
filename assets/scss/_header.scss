@@ -1,5 +1,5 @@
 .header {
-  @extend %margin-bottom-ld;
+  @extend %margin-bottom-lg;
 }
 
 .header-logo {
@@ -16,22 +16,22 @@
     @extend %text-shadow;
     font-family: $font-header;
 
-    @include sm-min {
+    @include xs-min {
       font-size: 3.5rem;
       letter-spacing: 0.33em;
       margin-right: -0.27em;
     }
-    @include sm {
+    @include xs {
       font-size: 2.5rem;
       letter-spacing: 0.2em;
     }
   }
-}
-.header-lodo__description {
-  display: block;
-  color: $color-light;
-  @extend %text-shadow;
-  font-size: 1.15rem;
-  letter-spacing: 0.2em;
-  font-family: $font-main;
+
+  &__description {
+    display: block;
+    color: $color-light;
+    @extend %text-shadow;
+    font-size: 1.15rem;
+    letter-spacing: 0.2em;
+  }
 }

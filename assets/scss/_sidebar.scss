@@ -120,9 +120,9 @@ $image-size-with-padding: $image-size + 10px;
   }
 
   &__item {
+    padding-right: 55px;
     margin-right: -1px;
     margin-left: -1px;
-    padding-right: 55px;
 
     color: $color-primary !important;
     background-color: transparent;
@@ -151,8 +151,8 @@ $image-size-with-padding: $image-size + 10px;
 
   &__badge {
     position: absolute;
-    top: 50%;
     right: $gap;
+    top: 50%;
 
     transform: translateY(-50%);
   }

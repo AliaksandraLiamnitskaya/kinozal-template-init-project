@@ -1,4 +1,4 @@
-.header-logo__title, .header-lodo__description {
+.header-logo__title, .header-logo__description {
   text-shadow: 0 0 3px black, 0 0 10px black, 0 0 20px black;
 }
 
@@ -134,19 +134,20 @@ h2::after {
 h3 {
   font-family: "PT Sans", sans-serif;
   line-height: 1.1;
+  font-size: 1rem;
 }
 
 h4 {
   color: #ffffff;
 }
 
-p {
-  margin: 0 0 10px;
-}
-
 section {
   position: relative;
   overflow: hidden;
+}
+
+p {
+  margin: 0 0 10px;
 }
 
 .header-logo {
@@ -164,21 +165,145 @@ section {
   font-family: "PT Serif", serif;
 }
 
-.header-lodo__description {
+.header-logo__description {
   display: block;
   color: #ffffff;
   font-size: 1.15rem;
   letter-spacing: 0.2em;
-  font-family: "PT Sans", sans-serif;
 }
 
-.panel:last-child {
+.main .site-search {
+  margin-bottom: 45px;
+}
+
+.main .user-login {
+  margin-bottom: 60px;
+}
+
+.new-films-row,
+.top-week-row {
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+  margin-bottom: -15px;
+}
+
+.new-films-item,
+.top-week-item {
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+  margin-bottom: 15px;
+}
+
+.new-films-item:hover .thumbnail,
+.top-week-item:hover .thumbnail {
+  background-color: #df8a13;
+  border-color: #df8a13;
+}
+
+.new-films-item__title,
+.top-week-item__title {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  color: #dddddd;
+  margin: 0;
+  font-weight: bold;
+}
+
+.new-films-item__image,
+.top-week-item__image {
+  width: 100%;
+}
+
+.new-films-item__thumbnail,
+.top-week-item__thumbnail {
+  margin-bottom: 0;
+}
+
+.new-films-item__caption,
+.top-week-item__caption {
+  padding: 9px;
+  text-align: center;
+}
+
+.film-news-item:hover .thumbnail {
+  background-color: #ec9720;
+}
+
+.film-news-item:hover h3 > a {
+  color: #df8a13;
+}
+
+.film-news-item:hover .btn-warning {
+  background-color: #df8a13;
+}
+
+.film-news-item h3 > a {
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.film-news-item .thumbnail {
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  margin-bottom: 0;
+}
+
+.film-news-item__image {
+  width: 100%;
+}
+
+.film-news-item__text {
+  text-align: justify;
+}
+
+.film-news-item__button {
+  float: right;
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  margin-bottom: 30px;
+}
+
+.film-comment__button {
+  float: right;
+  font-size: 1.125rem;
+}
+
+.film-info {
+  font-size: 1.2em;
+}
+
+.film-info__wrap {
+  white-space: nowrap;
+}
+
+.film-info__wrap:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.film-info__wrap__well {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.film-info__badge {
+  font-size: 0.8em;
+}
+
+.left-sidebar .panel:last-child {
   margin-bottom: 0;
 }
 
 .vertical-slider {
-  border-radius: 4px;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .vertical-slider__image {
@@ -193,15 +318,15 @@ section {
   position: absolute;
   top: 0;
   right: 15px;
-  border: none;
   margin-right: -5px;
+  border: none;
 }
 
 .user-login__tabs a {
-  background-color: transparent !important;
+  padding: 14px 5px 11px !important;
   color: #dddddd;
   border: none !important;
-  padding: 14px 5px 11px !important;
+  background-color: transparent !important;
 }
 
 .user-login__tabs .active a {
@@ -209,8 +334,8 @@ section {
 }
 
 .site-news-item {
-  clear: both;
   position: relative;
+  clear: both;
 }
 
 .site-news-item:not(:last-of-type) {
@@ -220,12 +345,12 @@ section {
 
 .site-news-item:not(:last-of-type)::after {
   position: absolute;
-  content: "";
-  width: calc(100% - 85px);
-  height: 1px;
-  background-color: #dddddd;
   right: 0;
   bottom: -5px;
+  width: calc(100% - 85px);
+  height: 1px;
+  content: "";
+  background-color: #dddddd;
 }
 
 .site-news-item:hover a {
@@ -233,18 +358,29 @@ section {
 }
 
 .site-news-item:hover .thumbnail {
-  background-color: #df8a13;
   border-color: #df8a13;
+  background-color: #df8a13;
 }
 
 .site-news-item__image {
   float: left;
+  width: 75px;
   margin-right: 10px;
   margin-bottom: 10px;
-  width: 75px;
+}
+
+.site-news-item__image img {
+  width: 100%;
+}
+
+.site-news-item__title {
+  margin-bottom: 10px;
 }
 
 .site-news-item__title a {
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
   display: -webkit-box;
   overflow: hidden;
   height: 50px;
@@ -252,9 +388,6 @@ section {
   line-height: 1.5rem;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  -webkit-transition: color 0.25s;
-  -o-transition: color 0.25s;
-  transition: color 0.25s;
 }
 
 .site-news-item__date {
@@ -264,8 +397,8 @@ section {
 }
 
 .top-films__body {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 
 .top-films__list {
@@ -273,16 +406,17 @@ section {
 }
 
 .top-films__item {
-  margin-left: -1px;
+  padding-right: 55px;
   margin-right: -1px;
-  background-color: transparent;
+  margin-left: -1px;
   color: #165690 !important;
+  background-color: transparent;
 }
 
 .top-films__item:hover, .top-films__item:focus {
-  background-color: #df8a13 !important;
   color: #ffffff !important;
   border-color: #df8a13;
+  background-color: #df8a13 !important;
 }
 
 .top-films__item:hover .badge, .top-films__item:focus .badge {
@@ -290,13 +424,13 @@ section {
 }
 
 .top-films__item:first-of-type {
-  border-radius: 0;
   border-top: none;
+  border-radius: 0;
 }
 
 .top-films__item:last-of-type {
-  border-radius: 0;
   border-bottom: none;
+  border-radius: 0;
 }
 
 .top-films__badge {
@@ -320,7 +454,7 @@ section {
 }
 
 .footer a {
-  color: #737373;
+  color: #757575;
 }
 
 .footer a:hover {
@@ -328,13 +462,21 @@ section {
 }
 
 .footer-fifth {
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .footer-fifth a {
   color: #dddddd;
+}
+
+@media (min-width: 576px) {
+  .header-logo__title {
+    font-size: 3.5rem;
+    letter-spacing: 0.33em;
+    margin-right: -0.27em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -346,11 +488,6 @@ section {
   }
   .navbar-right li {
     margin: 5px 0 5px 5px;
-  }
-  .header-logo__title {
-    font-size: 3.5rem;
-    letter-spacing: 0.33em;
-    margin-right: -0.27em;
   }
 }
 
@@ -364,6 +501,9 @@ section {
   .navbar-right {
     margin-top: 0;
   }
+}
+
+@media (max-width: 575.8px) {
   .header-logo__title {
     font-size: 2.5rem;
     letter-spacing: 0.2em;

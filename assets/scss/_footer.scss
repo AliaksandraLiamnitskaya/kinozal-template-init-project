@@ -1,30 +1,29 @@
 .footer {
-    padding-top: $gap * 3;
-    color: $color-gray;
-    background-color: $color-dark;
-  
-    ul {
-      padding: 0;
-      list-style: none;
-    }
-  
-    a {
-      color: darken($color-light, 55%);  
-  
-    &:hover {
-        color: $color-light;
-      }
-    }
-  
-    &-fifth {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-  
-      a {
-        color: $color-gray;
-      }
+  padding-top: $gap * 3;
+  color: $color-gray;
+  background-color: $color-dark;
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: darken($color-light, 54%);  
+
+  &:hover {
+      color: $color-light;
     }
   }
-  
-  
+
+  &-fifth {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    a {
+      color: $color-gray;
+    }
+  }
+}
+
